@@ -1,11 +1,14 @@
 import { ReactNode, useState } from 'react';
 import { GameContext } from '@context/GameContext';
 import { GameBoard } from '@interfaces/GameBoard.interface';
+import { checkWin } from '@utils/gameUtils';
+import { GameModeConfiguration } from '@interfaces/GameMode.interface';
 
 export const GameProvider = ({ children }: { children: ReactNode }) => {
-  const [mode, setMode] = useState<string>();
+  const [mode, setMode] = useState<GameModeConfiguration>();
   const [board, setBoard] = useState<GameBoard[][]>();
   const [isFirstPlayerTurn, setIsFirstPlayerTurn] = useState(true);
+  const [winner, setWinner] = useState<number | null>(null);
 
   /**
    * Fonction pour définir la cellule sélectionnée
@@ -21,6 +24,13 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     };
 
     setBoard(newBoard);
+
+    const winner = checkWin(newBoard, mode?.winningRows || 3);
+
+    if (winner !== null) {
+      setWinner(winner);
+    }
+
     setIsFirstPlayerTurn(!isFirstPlayerTurn);
   };
 
@@ -28,6 +38,8 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
    * Permet de réinitialiser le tableau de jeu
    */
   const resetBoard = () => {
+    setWinner(null);
+    setIsFirstPlayerTurn(true);
     setBoard(
       Array.from({ length: board?.length || 0 }, () =>
         Array(board?.length || 0).fill({}),
@@ -44,6 +56,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         setBoard,
         setSelectedCell,
         resetBoard,
+        winner,
       }}
     >
       {children}
