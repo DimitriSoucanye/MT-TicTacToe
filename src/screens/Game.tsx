@@ -4,6 +4,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { GameModes } from '@const/GameModes';
 import { GameBoard } from '@components/GameBoard';
 import { useGame } from '@context/GameContext';
+import GameHistory from '@components/GameHistory';
 
 /**
  * Composant pour le screen Home
@@ -51,6 +52,7 @@ const Game = () => {
       >
         <Text className="text-white text-xl text-center">Nouvelle partie</Text>
       </Pressable>
+      <GameHistory />
     </View>
   );
 };
