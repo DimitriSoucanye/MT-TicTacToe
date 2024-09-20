@@ -17,5 +17,8 @@
       "@hooks/*": ["src/hooks/*"],
       "@context/*": ["src/context/*"]
     }
-  }
+  },
+  "exclude": [
+    "src/**/*.test.ts"
+  ]
 }
