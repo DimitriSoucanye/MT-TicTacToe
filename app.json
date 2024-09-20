@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "MTTicTacToe",
+    "slug": "MTTicTacToe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "tictactoe",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dimitrisoucanye.MTTicTacToe"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.dimitrisoucanye.MTTicTacToe"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "21fe8697-2cfc-4769-a56c-d7b08205ffe0"
+      }
+    }
+  }
+}
