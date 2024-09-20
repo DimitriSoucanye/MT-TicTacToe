@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [MT Tic Tac Toa - Installation du projet](#mt-tic-tac-toa---installation-du-projet)
+- [MT Tic Tac Toe - Installation du projet](#mt-tic-tac-toe---installation-du-projet)
   - [Prérequis](#pr%C3%A9requis)
   - [Architecture générale du projet](#architecture-g%C3%A9n%C3%A9rale-du-projet)
     - [Lancement du projet, étape par étape](#lancement-du-projet-%C3%A9tape-par-%C3%A9tape)

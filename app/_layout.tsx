@@ -14,8 +14,8 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="sign-in" options={{ headerShown: false }} />
-        <Stack.Screen name="game" options={{ headerShown: false }} />
+        <Stack.Screen name="game-mode" options={{ headerShown: false }} />
+        <Stack.Screen name="game" />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>

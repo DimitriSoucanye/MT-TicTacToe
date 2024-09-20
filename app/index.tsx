@@ -14,7 +14,7 @@ const Index = () => {
     return <CustomSplashScreen />;
   }
 
-  return <Redirect href="/sign-in" />;
+  return <Redirect href="/game-mode" />;
 };
 
 export default Index;

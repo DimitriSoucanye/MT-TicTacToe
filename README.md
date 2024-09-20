@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [MT Tic Tac Toa - Expo](#mt-tic-tac-toa---expo)
+- [MT Tic Tac Toe - Expo](#mt-tic-tac-toe---expo)
   - [Le projet](#le-projet)
   - [Git](#git)
 - [Documentation](#documentation)
@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# MT Tic Tac Toa - Expo
+# MT Tic Tac Toe - Expo
 
 ## Le projet
 
