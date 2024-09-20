@@ -13,7 +13,8 @@ const Game = () => {
   const { mode } = useLocalSearchParams<{
     mode: string;
   }>();
-  const { setBoard, board, resetBoard, winner, setMode } = useGame();
+  const { setBoard, board, isFirstPlayerTurn, resetBoard, winner, setMode } =
+    useGame();
   const currentGameMode = GameModes.find((gameMode) => gameMode.mode === mode);
 
   useEffect(() => {
@@ -34,6 +35,9 @@ const Game = () => {
 
   return (
     <View className={'bg-blue flex h-full justify-center px-[10px]'}>
+      <Text className="text-white text-xl text-center mb-5">
+        C'est au joueur {isFirstPlayerTurn ? '1' : '2'} de jouer
+      </Text>
       {!winner ? (
         <GameBoard boardSize={currentGameMode.boardSize} />
       ) : (

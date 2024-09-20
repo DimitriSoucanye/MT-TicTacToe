@@ -53,6 +53,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         mode,
         setMode,
         board,
+        isFirstPlayerTurn,
         setBoard,
         setSelectedCell,
         resetBoard,

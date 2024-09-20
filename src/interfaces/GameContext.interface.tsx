@@ -4,6 +4,7 @@ import { GameModeConfiguration } from '@interfaces/GameMode.interface';
 export interface GameContextType {
   mode?: GameModeConfiguration;
   winner?: number | null;
+  isFirstPlayerTurn?: boolean | null;
   setMode?: (mode: GameModeConfiguration) => void;
   resetBoard?: () => void;
   setBoard?: (board: GameBoard[][]) => void;
