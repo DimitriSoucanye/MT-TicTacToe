@@ -13,7 +13,6 @@
       "@utils/*": ["src/utils/*"],
       "@provider/*": ["src/provider/*"],
       "@screens/*": ["src/screens/*"],
-      "@tests/*": ["src/tests/*"],
       "@hooks/*": ["src/hooks/*"],
       "@context/*": ["src/context/*"]
     }
