@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { GameModes } from '@const/GameModes';
 import { useRouter } from 'expo-router';
-import { GameModeConfiguration } from '@interfaces/GameMode';
+import { GameModeConfiguration } from '@interfaces/GameMode.interface';
 
 /**
  * Composant pour le screen GameMode

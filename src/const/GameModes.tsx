@@ -1,24 +1,24 @@
-import { GameModeConfiguration } from '@interfaces/GameMode';
+import { GameModeConfiguration } from '@interfaces/GameMode.interface';
 
 export const GameModes: GameModeConfiguration[] = [
   {
     mode: 'NOOB',
-    row: 3,
+    boardSize: 3,
     color: 'bg-red',
   },
   {
     mode: 'BEGINNER',
-    row: 6,
+    boardSize: 6,
     color: 'bg-pink',
   },
   {
     mode: 'INTERMEDIATE',
-    row: 9,
+    boardSize: 9,
     color: 'bg-orange',
   },
   {
     mode: 'EXPERT',
-    row: 11,
+    boardSize: 11,
     color: 'bg-yellow',
   },
 ];
