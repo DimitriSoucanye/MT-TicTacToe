@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
+import { Pressable, View, Text } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { GameModes } from '@const/GameModes';
 import { GameBoard } from '@components/GameBoard';
@@ -13,7 +13,7 @@ const Game = () => {
   const { mode } = useLocalSearchParams<{
     mode: string;
   }>();
-  const { setBoard, board } = useGame();
+  const { setBoard, board, resetBoard } = useGame();
   const currentGameMode = GameModes.find((gameMode) => gameMode.mode === mode);
 
   useEffect(() => {
@@ -34,6 +34,12 @@ const Game = () => {
   return (
     <View className={'bg-blue flex h-full justify-center px-[10px]'}>
       <GameBoard boardSize={currentGameMode.boardSize} />
+      <Pressable
+        className="border-2 border-white p-3 rounded-full mt-4"
+        onPress={() => resetBoard && resetBoard()}
+      >
+        <Text className="text-white text-xl text-center">Nouvelle partie</Text>
+      </Pressable>
     </View>
   );
 };

@@ -24,6 +24,17 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     setIsFirstPlayerTurn(!isFirstPlayerTurn);
   };
 
+  /**
+   * Permet de réinitialiser le tableau de jeu
+   */
+  const resetBoard = () => {
+    setBoard(
+      Array.from({ length: board?.length || 0 }, () =>
+        Array(board?.length || 0).fill({}),
+      ),
+    );
+  };
+
   return (
     <GameContext.Provider
       value={{
@@ -32,6 +43,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         board,
         setBoard,
         setSelectedCell,
+        resetBoard,
       }}
     >
       {children}
